@@ -11,4 +11,5 @@
   <Folder Name="/4  - Data/">
     <Project Path="Data/Data.csproj" />
   </Folder>
+  <Project Path="GestorTarefasAPI.Tests/GestorTarefasAPI.Tests.csproj" />
 </Solution>
