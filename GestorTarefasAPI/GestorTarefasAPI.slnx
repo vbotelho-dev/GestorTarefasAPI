@@ -1,3 +1,14 @@
 <Solution>
-  <Project Path="GestorTarefasAPI.Tests/GestorTarefasAPI.Tests.csproj" />
+  <Folder Name="/1 - Core/">
+    <Project Path="Core/Core.csproj" />
+  </Folder>
+  <Folder Name="/2 - Application/">
+    <Project Path="Application/Application.csproj" />
+  </Folder>
+  <Folder Name="/3 - Api/">
+    <Project Path="GestorTarefasAPI/GestorTarefasAPI.csproj" />
+  </Folder>
+  <Folder Name="/4  - Data/">
+    <Project Path="Data/Data.csproj" />
+  </Folder>
 </Solution>

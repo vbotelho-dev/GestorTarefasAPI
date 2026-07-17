@@ -16,6 +16,7 @@ public class Tarefa
     public Tarefa(string titulo, string? descricao, DateTime? dataVencimento)
     {
         ValidarTitulo(titulo);
+        ValidarDataVencimento(dataVencimento);
 
         Id = Guid.NewGuid();
         Titulo = titulo;
@@ -38,5 +39,11 @@ public class Tarefa
     {
         if (string.IsNullOrWhiteSpace(titulo))
             throw new DomainException("O título da tarefa é obrigatório.");
+    }
+
+    private static void ValidarDataVencimento(DateTime? dataVencimento)
+    {
+        if (dataVencimento.HasValue && dataVencimento.Value.Date < DateTime.Now.Date)
+            throw new DomainException("A data de vencimento não pode estar no passado.");
     }
 }
