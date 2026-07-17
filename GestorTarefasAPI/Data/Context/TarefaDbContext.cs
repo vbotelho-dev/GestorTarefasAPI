@@ -1,8 +1,8 @@
 ﻿using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Data.Context
-{
+namespace Data.Context;
+
     public class TarefaDbContext : DbContext
     {
         public TarefaDbContext(DbContextOptions<TarefaDbContext> options) : base(options)
@@ -29,5 +29,3 @@ namespace Data.Context
             base.OnModelCreating(modelBuilder);
         }
     }
-
-}
