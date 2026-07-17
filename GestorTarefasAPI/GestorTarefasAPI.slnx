@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/0 - Tests/">
+    <Project Path="GestorTarefasAPI.Tests/GestorTarefasAPI.Tests.csproj" Id="db64d96a-7b99-4ab7-b7e7-6c7f534d162e" />
+  </Folder>
+  <Folder Name="/1 - Core/">
+    <Project Path="Core/Core.csproj" />
+  </Folder>
+  <Folder Name="/2 - Application/">
+    <Project Path="Application/Application.csproj" />
+  </Folder>
+  <Folder Name="/3 - Api/">
+    <Project Path="GestorTarefasAPI/GestorTarefasAPI.csproj" />
+  </Folder>
+  <Folder Name="/4  - Data/">
+    <Project Path="Data/Data.csproj" />
+  </Folder>
+</Solution>
