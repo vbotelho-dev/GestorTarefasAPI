@@ -3,6 +3,7 @@ using Application.Services;
 using Core.Interfaces.Repository;
 using Data.Context;
 using Data.Repositories;
+using GestorTarefasAPI.Middlewares;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 
@@ -19,6 +20,9 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1",
         Description = "API RESTful para gestão de tarefas — .NET, DDD, EF Core InMemory"
     });
+    var xmlFilename = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
+    options.IncludeXmlComments(xmlPath);
 });
 
 builder.Services.AddDbContext<TarefaDbContext>(options =>
@@ -29,6 +33,7 @@ builder.Services.AddScoped<ITarefaService, TarefaService>();
 
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 if (app.Environment.IsDevelopment())
 {
     app.UseStaticFiles();
