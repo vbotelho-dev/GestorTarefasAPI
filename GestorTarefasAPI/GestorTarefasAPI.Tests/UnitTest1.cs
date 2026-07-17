@@ -1,4 +1,4 @@
-﻿namespace GestorTarefasAPITests
+﻿namespace GestorTarefasAPI.Tests
 {
     public class UnitTest1
     {
