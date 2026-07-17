@@ -9,6 +9,6 @@ public interface ITarefaRepository
     Task<IEnumerable<Tarefa>> GetAllAsync();
     Task<IEnumerable<Tarefa>> GetByFilterAsync(Status? status, DateTime? dataVencimento);
     Task AddAsync(Tarefa tarefa);
-    void Update(Tarefa tarefa);
-    void Remove(Tarefa tarefa);
+    Task UpdateAsync(Tarefa tarefa);
+    Task RemoveAsync(Tarefa tarefa);
 }

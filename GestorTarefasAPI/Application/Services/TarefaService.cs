@@ -50,7 +50,7 @@ public class TarefaService : ITarefaService
         }
 
         tarefa.Atualizar(dto.Titulo, dto.Descricao, dto.DataVencimento, dto.Status);
-        _repository.Update(tarefa);
+        await _repository.UpdateAsync(tarefa);
 
         _logger.LogInformation("Tarefa {Id} atualizada com sucesso.", id);
 
@@ -66,7 +66,7 @@ public class TarefaService : ITarefaService
             return false;
         }
 
-        _repository.Remove(tarefa);
+        await _repository.RemoveAsync(tarefa);
         _logger.LogInformation("Tarefa {Id} removida com sucesso.", id);
 
         return true;
